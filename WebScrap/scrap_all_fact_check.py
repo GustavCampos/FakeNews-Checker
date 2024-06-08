@@ -1,11 +1,18 @@
 import requests
 import pandas as pd
-import os
-from os.path import join as joinpath, realpath, dirname
+from os.path import join as joinpath, realpath, dirname, exists as path_exists
 from json import load as json_load
 from bs4 import BeautifulSoup
-from Utils.Progress import calc_progress
 
+
+def calc_progress(cur_value: int, end_value: int, size=20) -> str:
+    proportion = cur_value / end_value
+    
+    equals = "=" * round(size * proportion)
+    spaces = " " * (size - len(equals))
+    progress_bar = "[" + equals + spaces + "]"
+    
+    return f"{progress_bar} {cur_value}/{end_value} {proportion * 100:2.2f}%"
 
 def get_article_list(config: dict):
     csv_list = [["Title", "Link", "Byline", "Date", "Author"]]
@@ -51,7 +58,7 @@ def main():
         
     articles_df = get_article_list(config_dict)
     
-    if os.path.exists(ARTICLE_CSV_PATH):
+    if path_exists(ARTICLE_CSV_PATH):
         articles_df.to_csv(ARTICLE_CSV_PATH, mode="a", header=False, index=False)
     else:
         articles_df.to_csv(ARTICLE_CSV_PATH, index=False)
