@@ -1,0 +1,10 @@
+{
+  "main_url": "https://www.snopes.com/fact-check/",
+  "starting_point": 1,
+  "pages_to_check": 1073,
+  "sleep": {
+    "batch": 500,
+    "time": 20
+  }
+}
+  
