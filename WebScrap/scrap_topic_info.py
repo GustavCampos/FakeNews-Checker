@@ -35,7 +35,8 @@ def check_article(article_url: str) -> str:
 def main():
     LOCATION = dirname(realpath(__file__))
     CONFIG_PATH = joinpath(LOCATION, "config.json")
-    ARTICLES_TO_SCRAP = joinpath(LOCATION, "articles.csv")
+    ARTICLES_TO_SCRAP = joinpath(LOCATION,"scrap_topics","scrap_topic_0.csv")
+
     
     with open(CONFIG_PATH, encoding="utf-8") as file:
         CONFIGS = json_load(file)
