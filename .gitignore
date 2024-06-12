@@ -1,6 +1,6 @@
 # Custom files__________________________________
 */articles.csv
-*/fake_news_dataset.csv
+#*/fake_news_dataset.csv
 */scrap_topics/*
 
 # Byte-compiled / optimized / DLL files
