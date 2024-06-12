@@ -1,2 +1,2 @@
-# AI-FakeNews-Checker
-Project to predict artificial inteligence news veracity
+# FakeNews-Checker
+Project creating NN models to predict news veracity
