@@ -1,2 +1,2 @@
 # FakeNews-Checker
-Project creating NN models to predict news veracity
+Implementation of Naivy Byes prediction model in fact check articles to predict news veracity 
