@@ -1,2 +1,2 @@
-# AI-FakeNews-Checker
-Project to predict artificial inteligence news veracity
+# FakeNews-Checker
+Implementation of Naivy Byes prediction model in fact check articles to predict news veracity 
